@@ -92,7 +92,7 @@ def get_screen_shot():
     im = Image.open(r"./jump_temp.png")
     w, h = im.size
     # 将图片压缩，并截取中间部分，截取后为100*100
-    im = im.resize((108, 192), Image.ANTIALIAS)
+    im = im.resize((108, 192), Image.LANCZOS)
     region = (4, 50, 104, 150)
     im = im.crop(region)
     # 转换为jpg
